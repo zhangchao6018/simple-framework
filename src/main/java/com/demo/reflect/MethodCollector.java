@@ -26,7 +26,7 @@ import java.lang.reflect.Method;
 public class MethodCollector {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         //1、获取Class对象
-        Class reflectTargetClass = Class.forName("demo.reflect.ReflectTarget");
+        Class reflectTargetClass = Class.forName("com.demo.reflect.ReflectTarget");
         //2、获取所有公有方法
         System.out.println("***************获取所有的public方法，包括父类和Object*******************");
         Method[] methodArray = reflectTargetClass.getMethods();
@@ -35,6 +35,7 @@ public class MethodCollector {
         }
         //3、获取该类的所有方法
         System.out.println("***************获取所有的方法，包括私有的*******************");
+        //不能获取父类的
         methodArray = reflectTargetClass.getDeclaredMethods();
         for(Method m : methodArray){
             System.out.println(m);

@@ -24,15 +24,17 @@ import java.lang.reflect.InvocationTargetException;
 public class FieldCollector {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         //获取Class对象
-        Class reflectTargetClass = Class.forName("demo.reflect.ReflectTarget");
+        Class reflectTargetClass = Class.forName("com.demo.reflect.ReflectTarget");
         //1.获取所有公有的字段
         System.out.println("************获取所有公有的字段********************");
+        //可以拿到父类的共有字段
         Field[] fieldArray = reflectTargetClass.getFields();
         for (Field f : fieldArray){
             System.out.println(f);
         }
         //2.获取所有的字段
         System.out.println("************获取所有的字段(包括私有、受保护、默认的)********************");
+        //不能拿到父类的
         fieldArray = reflectTargetClass.getDeclaredFields();
         for (Field f : fieldArray){
             System.out.println(f);
