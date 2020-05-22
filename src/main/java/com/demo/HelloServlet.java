@@ -1,5 +1,6 @@
 package com.demo;
 
+import com.demo.entity.bo.HeadLine;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.ServletException;
@@ -27,9 +28,10 @@ public class HelloServlet extends HttpServlet {
         log.debug("name is " + name);
         req.setAttribute("name", name);
         req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req, resp);
-//        HeadLine headLine = new HeadLine();
-//        headLine.setLineId(1L);
-//        headLine.getLineId();
+
+        HeadLine headLine = new HeadLine();
+        headLine.setLineId(1L);
+        headLine.getLineId();
     }
     @Override
     public  void destroy(){

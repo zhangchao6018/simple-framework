@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7dc27150-3a7c-46c3-8d23-11cb0b361701" name="Default Changelist" comment="" />
+    <list default="true" id="7dc27150-3a7c-46c3-8d23-11cb0b361701" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/demo/generic/GenericClassExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/demo/generic/GenericDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/demo/generic/GenericFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/demo/generic/GenericIFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/demo/generic/RobotFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/bo/HeadLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/bo/ShopCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/dto/MainPageInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/entity/dto/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/abstractf/AbstractFactoryDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/abstractf/ComputerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/abstractf/DellComputerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/abstractf/HpComputerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/abstractf/LenovoComputerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/DellKeyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/DellMouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/HpKeyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/HpMouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/IBMMouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/Keyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/LenovoKeyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/LenovoMouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/entity/Mouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/DellMouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/FactoryMethodDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/HpMouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/IBMMouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/LenovoMouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/method/MouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/pattern/simple/MouseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/reflect/ConstructorCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/reflect/FieldCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/reflect/MethodCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/reflect/ReflectTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/reflect/ReflectTargetOrigin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/combine/HeadLineShopCategoryCombineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/combine/impl/HeadLineShopCategoryCombineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/combine/impl/HeadLineShopCategoryCombineServiceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/solo/HeadLineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/solo/ShopCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/solo/impl/HeadLineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/solo/impl/ShopCategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/HelloServlet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +57,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -20,6 +71,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1cFgPMJMTjAEXG6xPCQCq0GD7Ce" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,9 +80,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/demo" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -39,16 +98,45 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/src/main/java/demo/pattern" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/service" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/demo" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src/main/resources/WEB-INF/jsp/jsp" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/demo" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ConstructorCollector">
+    <configuration name="ConstructorCollector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.reflect.ConstructorCollector" />
+      <module name="simple-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.reflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectTarget" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.reflect.ReflectTarget" />
+      <module name="simple-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.reflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="tomcat运行" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -74,6 +162,12 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ConstructorCollector" />
+        <item itemvalue="Application.ReflectTarget" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -85,7 +179,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590129729391</updated>
-      <workItem from="1590129731532" duration="1420000" />
+      <workItem from="1590129731532" duration="4894000" />
+      <workItem from="1590134840067" duration="8008000" />
     </task>
     <servers />
   </component>
@@ -101,22 +196,26 @@
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="2096" y="228" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130490543" />
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom" timestamp="1590130950217">
+    <state x="2204" y="169" key="CommitChangelistDialog2" timestamp="1590147513691">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130950217" />
-    <state width="1638" height="259" key="GridCell.Tab.0.center" timestamp="1590130950217">
+    <state x="2204" y="169" key="CommitChangelistDialog2/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590147513691" />
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom" timestamp="1590147244606">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130950217" />
-    <state width="1638" height="259" key="GridCell.Tab.0.left" timestamp="1590130950216">
+    <state width="1638" height="321" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590147244606" />
+    <state width="1638" height="321" key="GridCell.Tab.0.center" timestamp="1590147244605">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130950216" />
-    <state width="1638" height="259" key="GridCell.Tab.0.right" timestamp="1590130950217">
+    <state width="1638" height="321" key="GridCell.Tab.0.center/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590147244605" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left" timestamp="1590147244604">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state width="1638" height="259" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130950217" />
+    <state width="1638" height="321" key="GridCell.Tab.0.left/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590147244604" />
+    <state width="1638" height="321" key="GridCell.Tab.0.right" timestamp="1590147244605">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1638" height="321" key="GridCell.Tab.0.right/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590147244605" />
     <state x="2120" y="148" key="SettingsEditor" timestamp="1590129938666">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
@@ -125,5 +224,9 @@
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="2297" y="263" width="670" height="675" key="run.anything.popup/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590130390977" />
+    <state x="2295" y="292" width="670" height="676" key="search.everywhere.popup" timestamp="1590145886392">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2295" y="292" width="670" height="676" key="search.everywhere.popup/1680.23.1920.1057/0.23.1680.1027@1680.23.1920.1057" timestamp="1590145886392" />
   </component>
 </project>
