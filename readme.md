@@ -1,4 +1,5 @@
 `一 init`
+
     1.创建maven工程,引入依赖
     2.编写servlet类,以及jsp文件
     3.运行访问:http://localhost:8080/simple-framework/hello
