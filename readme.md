@@ -205,5 +205,5 @@
             根据Class获取对应实例 --org.simpleframework.core.BeanContainer.getBean
             获取所有的Class实例  --org.simpleframework.core.BeanContainer.getClasses
             通过注解获取被注解标记的Class   org.simpleframework.core.BeanContainer.getClassesByAnnotation
-            通过超类获取对应的子类Class    org.simpleframework.core.BeanContainer.getClassesBySuper
+            通过超类获取对应的子类Class    org.simpleframework.core.BeanContainer.getClassesBySuper     --验证isAssignableFrom()方法 ->demo.api.assignable.AssignableDemo
             获取容器载体保存Class的数量

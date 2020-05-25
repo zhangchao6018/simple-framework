@@ -1,5 +1,8 @@
 package demo.api.assignable;
 
+/**
+ * isAssignableFrom()的调用者是否是参数本身或者其父类
+ */
 public class AssignableDemo {
     public static void main(String[] args) {
         System.out.println("1.FirstClass.class.isAssignableFrom(FirstClass.class) : " + FirstClass.class.isAssignableFrom(FirstClass.class));
