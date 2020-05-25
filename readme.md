@@ -83,9 +83,10 @@
     2.@see java.lang.annotation.Annotation
     3.所有注解都继承自 Annotation
         反编译注解的.class文件
-            cd src/main/java  ->  com/demo/annotation/TestAnnotation.java
-        javap -verbose com.demo.annotation.TestAnnotation
-            ->  public interface com.demo.annotation.TestAnnotation extends java.lang.annotation.Annotation
+            cd src/main/java/demo/annotation    javac TestAnnotation.java 
+        javap -verbose annotation.TestAnnotation
+            ->  public interface demo.annotation.TestAnnotation extends java.lang.annotation.Annotation
+
             
     4.注解的功能:
         作为特定的标记,告诉编译器一些信息
@@ -117,11 +118,11 @@
                 <T extends Annotation> T getAnnotation(Class<T> annotationClass);
                 default boolean isAnnotationPresent(Class<? extends Annotation> annotationClass)   指定类型注解是否存在于此元素上
         5.5 解析自定义注解:----附源码跟踪技巧
-            com.demo.annotation.AnnotationParser
+            demo.annotation.AnnotationParser
                 main函数添加vm参数:-Djdk.proxy.ProxyGenerator.saveGeneratedFiles=true -XX:+TraceClassLoading    --保存代理对象,并打印程序所加载用到的类
-                    可以看到生成了一个动态代理对象:$Proxy1.class
+                    可以看到生成了一个动态代理对象:$Proxy1.class   --com/sun/proxy/$Proxy1.class
                         源码剖析:com.sun.proxy.$Proxy1#gender   return (String)super.h.invoke(this, m6, (Object[])null);
-                            调用了父类Proxy的invoke方法(区分于反射的同命方法)
+                            调用了父类Proxy的invoke方法(区分于反射的同名方法)
                                 查看java.lang.reflect.InvocationHandler实现了类:sun.reflect.annotation.AnnotationInvocationHandler
                                     侧面说明了spring的强大--合理的命名就能定位到实现类
         5.6 注解的工作原理
@@ -184,5 +185,25 @@
                         http://www.news.cn.8080/Public/GetValidateCode?time=123#index
             获取包下类的集合
                 org.simpleframework.util.ClassUtil.extractPackageClass
-        2.4 单例模式 --确保一个雷只有一个实例,并对外提供统一的访问方式
+        2.4 单例模式 --确保一个类只有一个实例,并对外提供统一的访问方式   --阅读源码:  ObjectInputStream的readObject
             饿汉模式:
+            懒汉模式
+            加入双重检查锁机制的懒汉模式能确保线程安全
+            装备了枚举的饿汉模式能低于反射与序列化的进攻,****满足容器需求****
+    3. 实现容器
+        保存Class对象及其实例的载体
+        容器的加载
+        容器的操作方式
+        
+        3.1 实现容器的加载
+            配置的管理与获取
+            获取指定范围内的Class对象  -> org.simpleframework.core.BeanContainer.BEAN_ANNOTATION
+            一句配置提取Class对象,连同实例一并存入容器   -> org.simpleframework.core.BeanContainer.loadBeans
+            -->测试:org.simpleframework.core.BeanContainerTest.loadBeansTest  对BeanContainer对象打端点进行跟踪更佳...
+        3.2 实现容器的操作方式(容器的增删改查)
+            增加删除操作  --org.simpleframework.core.BeanContainer.addBean  removeBean
+            根据Class获取对应实例 --org.simpleframework.core.BeanContainer.getBean
+            获取所有的Class实例  --org.simpleframework.core.BeanContainer.getClasses
+            通过注解获取被注解标记的Class   org.simpleframework.core.BeanContainer.getClassesByAnnotation
+            通过超类获取对应的子类Class    org.simpleframework.core.BeanContainer.getClassesBySuper
+            获取容器载体保存Class的数量

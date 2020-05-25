@@ -3,10 +3,11 @@ package com.demo.service.solo.impl;
 import com.demo.entity.bo.HeadLine;
 import com.demo.entity.dto.Result;
 import com.demo.service.solo.HeadLineService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
-//@Service
+@Service
 public class HeadLineServiceImpl implements HeadLineService {
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {

@@ -7,10 +7,11 @@ import com.demo.entity.dto.Result;
 import com.demo.service.combine.HeadLineShopCategoryCombineService;
 import com.demo.service.solo.HeadLineService;
 import com.demo.service.solo.ShopCategoryService;
+import org.simpleframework.core.annotation.Service;
 
 import java.util.List;
 
-//@Service
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
 //    @Autowired
     private HeadLineService headLineService;

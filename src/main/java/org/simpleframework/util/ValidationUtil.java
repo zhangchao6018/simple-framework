@@ -3,6 +3,9 @@ package org.simpleframework.util;
 import java.util.Collection;
 import java.util.Map;
 
+/**
+ * 校验工具类
+ */
 public class ValidationUtil {
     /**
      * String是否为null或""
