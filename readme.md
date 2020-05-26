@@ -207,3 +207,20 @@
             通过注解获取被注解标记的Class   org.simpleframework.core.BeanContainer.getClassesByAnnotation
             通过超类获取对应的子类Class    org.simpleframework.core.BeanContainer.getClassesBySuper     --验证isAssignableFrom()方法 ->demo.api.assignable.AssignableDemo
             获取容器载体保存Class的数量
+        3.3 Spring框架作用域
+            singleton
+            prototype  每次getBean都产生新的实例
+            request     每次http请求都产生新实例
+            session session级别的
+            globalsession 全局http session
+    4.实现容器依赖注入
+        目前容器里面的Bean实例仍可能是不完备的
+            实例某些必须的成员变量还没被创建出来 ->引出依赖注入的概念
+        实现思路
+            定义相关的注解标签
+            实现创建被注解标记的成员变量实例,并将其注入到成员变量
+            依赖注入的使用
+        核心方法实现:org.simpleframework.inject.DependencyInjector.doIoc 
+        测试:org.simpleframework.inject.DependencyInjectorTest.doIocTest
+            
+            
