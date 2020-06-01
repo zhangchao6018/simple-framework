@@ -224,11 +224,93 @@
         测试:org.simpleframework.inject.DependencyInjectorTest.doIocTest
             
 ##### 3. AOP的实现     
-    系统需求
+    3.1 系统需求
         添加日志信息:为每个方法添加统计时间
         添加系统权限校验:针对某些方法进行限制
         OOP下必须得为每个方法都添加通用逻辑工作,增加维护成本
     不同的问题交给不同的部分去解决,每个部分专注做自己的事情
     Aspect之于APO就相当于Class之于OOP,Bean之于Spring
+    3.2 AOP的组成:
+        切面Aspect:将横切关注点逻辑进行模块化封装的实体对象
+        通知Advice:好比是Class里面的方法,还定义了织入逻辑的时机
+        连接点JoinPoint:允许使用Advice的地方 
+        SprignAOP默认只支持方法级别AOP
+        切入点Pointcut:定义一系列规则对Joinpoint进行筛选
+    3.3 AOP的种类
+        Advice的种类
+            BeforeAdvice:在JoinPoint前被执行的Advice
+            AfterAdvice:好比try catch finally的finally
+            AfterReturningAdvice:在Joinpoint执行流程正常返回结果后执行
+            AfterThrowingAdvice:抛异常执行
+            AroundAdvice:Joinpoint前后都执行,最常用的Advice
+######SpringAOP的实现原理     
+    代理模式
+        demo.pattern.proxy.impl.AlipayToB
+        demo.pattern.proxy.impl.AlipayToC
+    问题:对不同接口的实现,增强功能一致,也需要编写多个代理类（代理类需要实现不同的接口）
+    需求改进
+        溯源ClassLoader
+    切入点:
+        根据一定规则去改动或者生成新的字节流,将切面逻辑织入其中
+    动态代理--
+        根据接口或者目标类,计算出代理类的字节码并加载到JVM中去
+    1.Jdk动态代理
+        程序运行时动态生成类的字节码,并加载到JVM中
+        要求被代理类必须【实现特定接口】
+        并不要求代理对象去实现接口，所以可以可以复用代理对象的逻辑
+        --java.lang.reflect.InvocationHandler.invoke
+        --java.lang.reflect.Proxy
+    2.CGLIB动态代理
+        代码生成库:Code Generation Library
+            不要求被代理类实现接口
+            内部主要封装了ASM Java字节码操控框架
+            动态生成子类以覆盖非final的方法,绑定钩子回调自定义拦截器
+    3.区别
+        JDK动态代理:基于反射,要求业务类必须实现接口
+            优势:
+                不需要额外jar包提来,更可靠
+                平滑支持JDK版本的升级
+        CGLIIB:基于ASM机制实现,生成业务类的子类作为代理类
+            优势:
+                被代理对象无需实现接口,能实现代理类的无侵入
+    4.SpringAop的底层机制
+        CGLIB和JDK动态代理共存
+        默认:Bean实现接口则用JDK,否则使用CGLIB
+    
+######自研框架的AOP1.0
+    使用CGLIB 
+    思路:
+        1.解决标记的问题(注解),定义横切逻辑的骨架
+            1.定义横切逻辑相关的注解:org.simpleframework.aop.annotation.Aspect
+            2.定义供外部使用的横切逻辑骨架
+        2.定义Aspect横切逻辑以及被代理方法的执行顺序
+            创建MethodInterceptor的实现类
+            定义必要的成员变量--被代理类以及Aspect列表
+            按照Order对Aspect进行排序
+            实现对横切逻辑以及被代理对象方法的定序执行
+        3.将横切逻辑织入到被代理的对象以生成动态代理对象
+            
+    AspectJ框架
+        织入时机:
+        编译时织入:利用ajc,将切面逻辑织入到类生成的.class文件
+        编译后织入:利用ajc,修改javac编译出来的class文件
+        类加载期织入:利用java agent,在类加载的时候织入切面逻辑
+    SpringAOP2.0
+        仅用到AspectJ的切面语法,未使用ajc编译工具
+            避免用户学习成本
+            默认不用,但可以引入
+            织入机制沿用自己的CGLIB和JDK动态代理机制
+        @see :src/main/resources/img/AspectJ框架对比springAOP.png
+    自研aop大体思路:
+       定义注解:Aspect,并在需要加强的类上加上该注解
+       拿到这些类--org.simpleframework.core.BeanContainer.getClassesByAnnotation
+       筛选(需要排除注解本身的类)--org.simpleframework.aop.AspectWeaver.wrapIfNecessary
+       生成这些类的代理类--org.simpleframework.aop.ProxyCreator.createProxy
+       将增强后的Bean重新放回容器(覆盖)
+       
+       
+        
     
     
+    
+        

@@ -3,6 +3,9 @@ package demo.pattern.proxy.jdkproxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
+/**
+ * 可复用对代理类  不用实现目标接口
+ */
 public class AlipayInvocationHandler implements InvocationHandler {
     private Object targetObject;
     public AlipayInvocationHandler(Object targetObject){
@@ -20,6 +23,6 @@ public class AlipayInvocationHandler implements InvocationHandler {
         System.out.println("从招行取款");
     }
     private void afterPay() {
-        System.out.println("支付给慕课网");
+        System.out.println("支付给淘宝。。。");
     }
 }

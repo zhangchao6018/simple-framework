@@ -15,9 +15,9 @@ public class AlipayToC implements ToCPayment {
     }
 
     private void beforePay() {
-        System.out.println("从招行取款");
+        System.out.println("从招行取款...");
     }
     private void afterPay() {
-        System.out.println("支付给慕课网");
+        System.out.println("支付给淘宝...");
     }
 }
