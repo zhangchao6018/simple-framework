@@ -19,11 +19,15 @@ import java.util.List;
 @WebServlet("/*")
 public class DispatcherServlet extends HttpServlet {
     List<RequestProcessor> PROCESSOR = new ArrayList<>();
+
+    /**
+     * 只会调用一次
+     */
     @Override
     public void init(){
         //1.初始化容器
         BeanContainer beanContainer = BeanContainer.getInstance();
-        beanContainer.loadBeans("com.imooc");
+        beanContainer.loadBeans("com.demo");
         new AspectWeaver().doAop();
         new DependencyInjector().doIoc();
         //2.初始化请求处理器责任链

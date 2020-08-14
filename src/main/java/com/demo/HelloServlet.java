@@ -27,8 +27,8 @@ public class HelloServlet extends HttpServlet {
         String name = "我的简易框架";
         log.debug("name is " + name);
         req.setAttribute("name", name);
-        req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req, resp);
-
+//        req.getRequestDispatcher("/WEB-INF/jsp/hello.jsp").forward(req, resp);
+        req.getRequestDispatcher("/templates/hello.jsp").forward(req, resp);
         HeadLine headLine = new HeadLine();
         headLine.setLineId(1L);
         headLine.getLineId();

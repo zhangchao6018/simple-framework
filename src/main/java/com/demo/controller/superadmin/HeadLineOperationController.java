@@ -20,7 +20,7 @@ import java.util.List;
 public class HeadLineOperationController {
     @Autowired(value = "HeadLineServiceImpl")
     private HeadLineService headLineService;
-//    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelAndView addHeadLine(@RequestParam("lineName") String lineName,
                                     @RequestParam("lineLink")String lineLink,
                                     @RequestParam("lineImg")String lineImg,

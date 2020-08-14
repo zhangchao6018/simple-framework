@@ -308,9 +308,31 @@
        生成这些类的代理类--org.simpleframework.aop.ProxyCreator.createProxy
        将增强后的Bean重新放回容器(覆盖)
        
-       
-        
-    
-    
+######自研框架的MVC   
+    DispatcherServlet
+        解析请求路径和请求方法
+        依赖容器,建立并维护Controller方法与请求的映射
+        用合适的Controller方法去处理特定的请求
+    责任链模式执行请求之
+        1.StaticResourceRequestProcessor的开发:
+            http://localhost:8080/simple-framework/static/aspectOrder.png
+        2.JspRequestProcessor
+            http://localhost:8080/simple-framework/templates/addheadline.jsp    
+        3.ControllerRequestProcessor
+            功能:
+                针对特定请求,选择匹配的Controller方法进行处理
+                解析请求里的参数及其对应的值,并赋值给Controller方法的参数
+                选择合适的Render,为后续请求结果的渲染做准备
+            实现:
+                默认--DefaultResultRender
+                    http://localhost:8080/simple-framework/headline/remove
+                InternalErrorResultRender
+                    http://localhost:8080/simple-framework/main/test
+                ResourceNotFoundResultRender
+                    http://localhost:8080/simple-framework/not/find
+                JsonResultRender
+                    http://localhost:8080/simple-framework/headline/query
+                ViewResultRender
+                    http://localhost:8080/simple-framework/templates/addheadline.jsp
     
         
